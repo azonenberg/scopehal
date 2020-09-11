@@ -1886,6 +1886,11 @@ void LeCroyOscilloscope::Stop()
 	ClearPendingWaveforms();
 }
 
+void LeCroyOscilloscope::ForceTrigger()
+{
+    LogError("Force trigger not supported\n");
+}
+
 size_t LeCroyOscilloscope::GetTriggerChannelIndex()
 {
 	//Check cache

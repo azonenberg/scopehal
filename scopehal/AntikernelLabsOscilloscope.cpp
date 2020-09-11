@@ -460,6 +460,11 @@ void AntikernelLabsOscilloscope::Stop()
 	*/
 }
 
+void AntikernelLabsOscilloscope::ForceTrigger()
+{
+    LogError("Force trigger not supported\n");
+}
+
 bool AntikernelLabsOscilloscope::IsTriggerArmed()
 {
 	//return m_triggerArmed;

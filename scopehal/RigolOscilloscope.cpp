@@ -834,6 +834,12 @@ void RigolOscilloscope::Stop()
 	m_triggerOneShot = true;
 }
 
+void RigolOscilloscope::ForceTrigger()
+{
+	lock_guard<recursive_mutex> lock(m_mutex);
+	m_transport->SendCommand("TFOR");
+}
+
 bool RigolOscilloscope::IsTriggerArmed()
 {
 	return m_triggerArmed;
